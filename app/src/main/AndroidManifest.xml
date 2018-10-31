@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="me.bloodybadboy.bakingapp">
+
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+  <uses-permission android:name="android.permission.INTERNET"/>
+  <!-- todo: remove it, only for file logging -->
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+  <application
+      android:name=".App"
+      android:allowBackup="true"
+      android:icon="@mipmap/ic_launcher"
+      android:label="@string/app_name"
+      android:roundIcon="@mipmap/ic_launcher_round"
+      android:supportsRtl="true"
+      android:theme="@style/AppTheme"
+      tools:ignore="GoogleAppIndexingWarning">
+    <activity
+        android:name=".ui.recipes.RecipesActivity"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme.NoActionBar">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+
+        <category android:name="android.intent.category.LAUNCHER"/>
+      </intent-filter>
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE"/>
+      </intent-filter>
+    </activity>
+    <activity
+        android:name=".ui.details.RecipeDetailActivity"
+        android:parentActivityName=".ui.recipes.RecipesActivity"
+        android:theme="@style/AppTheme.Details">
+      <meta-data
+          android:name="android.support.PARENT_ACTIVITY"
+          android:value="me.bloodybadboy.bakingapp.ui.recipes.RecipesActivity"/>
+    </activity>
+    <activity
+        android:name=".ui.step.StepDetailsActivity"
+        android:theme="@style/AppTheme.NoActionBar">
+    </activity>
+
+    <receiver android:name=".widget.IngredientWidgetProvider">
+      <intent-filter>
+        <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+      </intent-filter>
+
+      <meta-data
+          android:name="android.appwidget.provider"
+          android:resource="@xml/recipe_ingredient_widget_info"/>
+    </receiver>
+
+    <service
+        android:name=".widget.IngredientWidgetService"
+        android:permission="android.permission.BIND_REMOTEVIEWS"/>
+    <service
+        android:name=".widget.RecipeWidgetUpdateService"
+        android:exported="false">
+    </service>
+  </application>
+
+</manifest>

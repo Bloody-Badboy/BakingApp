@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="colorPrimary">#ffffff</color>
+  <color name="colorPrimaryDark">#cccccc</color>
+  <color name="colorAccent">#000000</color>
+
+  <color name="color_material_green">#388e3c</color>
+  <color name="colorDivider">#ffeeeeee</color>
+
+  <!-- colors for each ingredient item-->
+  <!--<array name="colors">-->
+    <!--<item>#4768FD</item>-->
+    <!--<item>#574DDD</item>-->
+    <!--<item>#8DA0FC</item>-->
+    <!--<item>#ABD0F2</item>-->
+    <!--<item>#27E5FD</item>-->
+    <!--<item>#1DB8D2</item>-->
+    <!--<item>#069F86</item>-->
+    <!--<item>#39C79D</item>-->
+    <!--<item>#FF4081</item>-->
+    <!--<item>#94DD6B</item>-->
+    <!--<item>#BBF5CB</item>-->
+    <!--<item>#31E7B6</item>-->
+    <!--<item>#FEEBB6</item>-->
+    <!--<item>#FCD230</item>-->
+    <!--<item>#E8BC4F</item>-->
+    <!--<item>#FD9127</item>-->
+    <!--<item>#FF6C00</item>-->
+    <!--<item>#FF9E80</item>-->
+    <!--<item>#FABFA9</item>-->
+  <!--</array>-->
+</resources>

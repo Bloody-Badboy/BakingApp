@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="RtlHardcoded"
+    >
+
+  <com.google.android.material.appbar.AppBarLayout
+      android:id="@+id/appbar_layout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:theme="@style/ThemeOverlay.AppCompat.Light"
+      >
+    <com.google.android.material.appbar.CollapsingToolbarLayout
+        android:id="@+id/collapsing_toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        app:contentScrim="?attr/colorPrimary"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed"
+        app:title="@string/app_name"
+        >
+
+      <me.bloodybadboy.bakingapp.ui.view.RecipeImageView
+          android:id="@+id/riv_details_recipe_thumb"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:contentDescription="@string/description_recipe_poster"
+          android:scaleType="centerCrop"
+          android:tint="#55ffffff"
+          />
+
+      <androidx.appcompat.widget.Toolbar
+          android:id="@+id/toolbar"
+          android:layout_width="match_parent"
+          android:layout_height="?attr/actionBarSize"
+          android:background="@null"
+          app:layout_collapseMode="pin"
+          />
+
+    </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:tabTextColor="@android:color/black"
+        />
+  </com.google.android.material.appbar.AppBarLayout>
+
+  <FrameLayout
+      android:id="@+id/recipe_detail_container"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      app:layout_behavior="@string/appbar_scrolling_view_behavior"
+      />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

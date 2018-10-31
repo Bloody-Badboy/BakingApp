@@ -1,0 +1,15 @@
+<resources>
+  <string name="app_name">BakingApp</string>
+
+  <!-- TODO: Remove or change this placeholder text -->
+  <string name="hello_blank_fragment">Hello blank fragment</string>
+  <string name="appwidget_text">EXAMPLE</string>
+  <string name="add_widget">Add widget</string>
+  <string name="add_recipe">ADD RECIPE</string>
+  <string name="servings">Servings: %s</string>
+  <string name="tab_title_ingredients">Ingredients</string>
+  <string name="tab_title_steps">Steps</string>
+  <string name="retry">Retry</string>
+  <string name="no_internet">Couldn\'t connect to the internet. Please check your connection settings and try again.</string>
+  <string name="description_recipe_poster">Recipe Poster</string>
+</resources>
